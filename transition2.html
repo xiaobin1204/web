@@ -3,14 +3,20 @@
 	<head>
 		<title>transition1</title>
 		<style>
+			.container {
+				padding: 50px 30px;
+				position: relative;
+			}
 			.box {
 				width: 260px;
 				height: 260px;
 				background-color: #21ba45;
+				position: absolute;
+				left: 30px;
 				
 				/*添加动画的项目*/
-				transition-property: border-radius, background-color;
-				transition-duration: .6s, 2s;
+				transition-property: border-radius, background-color, left;
+				transition-duration: .6s, 2s, 3s;
 				
 				/*等待时间*/
 				transition-delay: 1s;
@@ -25,11 +31,14 @@
 			.box:hover {
 				border-radius: 50%;
 				background-color: #fbbd08;
+				left: 300px;
 			}
 		</style>
 	</head>
 	<body>
+	  <div class="container">
 		<div class="box">
 		</div>
+	  </div>
 	</body>
 </html>
